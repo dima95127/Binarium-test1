@@ -24,11 +24,10 @@ jobs:
 
       - name: Build APK
         run: |
-          buildozer -v android debug
+          echo y | buildozer -v android debug
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
           name: trading-helper-apk
           path: bin/*.apk
-          
